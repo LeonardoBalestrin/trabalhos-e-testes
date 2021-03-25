@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+
+int seq(int a,int b,int c,int n){
+    printf(" %d", b);
+    if(n<=0){
+        return 1;
+    }
+    else{ 
+        a=b+c;
+        c=b;
+        b=a;
+        return seq(a,b,c,n-1);}
+}
+
+
+int main()
+{
+    int a=0,b=1,c=0,n;
+    printf("quantos numeros da sequencia sao desejados:");
+    scanf("%d", &n);
+    printf("\nsequencia: ");
+    seq(a,b,c,n-1);//como eu declaro a primeira vez fora de loop esse -1 garante a quantia correta.
+    return 0;
+}
