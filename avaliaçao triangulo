@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void avaliarTriangulo(a,b,c){
+    if(a==b && b==c){printf("\n Equilatero!");}
+    else if(a!=b && b!=c && c!=a){printf("\n Escaleno!");}
+    else printf("\nIsosceles!");
+
+}
+int main()
+{
+    int a=0,b=0,c=0;
+
+    printf("Digite 1 lado: ");
+    scanf("%d", &a);
+    printf("\nDigite 2 lado: ");
+    scanf("%d", &b);
+    printf("\nDigite 3 lado: ");
+    scanf("%d", &c);
+    if(a+b>=c && a+c>=b && b+c>=a){
+    avaliarTriangulo(a,b,c);}
+    else printf("Esse triangulo nao existe! ");
+
+    return 0;
+}
