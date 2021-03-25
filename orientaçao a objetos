@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+typedef struct // Cria uma STRUCT para armazenar os dados de uma pessoa
+{
+    int ladoa;   // define o terceiro lado
+    int ladob;    // define o segundo lado
+    int ladoc; // define o terceiro lado
+} triangulo;
+
+void avaliarTriangulo(a,b,c){
+    if(a==b && b==c){printf("\n Equilatero!");}
+    else if(a!=b && b!=c && c!=a){printf("\n Escaleno!");}
+    else printf("\nIsosceles!");
+}
+
+int main()
+{
+    int a, b, c;
+    triangulo primeiro;
+    printf("Digite 1 lado: ");
+    scanf("%d", &primeiro.ladoa);
+    printf("\nDigite 2 lado: ");
+    scanf("%d", &primeiro.ladob);
+    printf("\nDigite 3 lado: ");
+    scanf("%d", &primeiro.ladoc);
+    a=primeiro.ladoa;
+    b=primeiro.ladob;
+    c=primeiro.ladoc;
+    if(a+b>=c && a+c>=b && b+c>=a){
+    avaliarTriangulo(a,b,c);}
+    else printf("Esse triangulo nao existe! ");
+
+    return 0;
+}
