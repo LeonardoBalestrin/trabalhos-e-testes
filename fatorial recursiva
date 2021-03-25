@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+
+int fat(int n, int f){
+    if(n<1){//menor que 1 para que a conta nao zere ao final do ciclo 
+        printf("numero fatorado: %d", f);
+        return 1;
+    }
+    else{
+        f = f*n;
+        n--;
+        fat(n, f);
+    }
+}
+
+
+int main()
+{
+    int f=1, n;
+    printf("digite um numero:");
+    scanf("%d", &n);
+    fat(n, f);
+
+    return 0;
+}
